@@ -105,3 +105,4 @@ function animate(div) {
 function random(data) {
     return data[Math.floor(Math.random() * data.length)];
 }
+
