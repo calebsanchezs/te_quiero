@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe6e6;
+    height: 100vh;
+    position: relative;
+  }
+
+  .background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffcccc;
+
+  }
+
+  .rosa {
+    width: 100%;
+    height: 100%;
+    background-color: #ffcccc;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .rosa::before,
+  .rosa::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #cc0066;
+    border-radius: 50%;
+  }
+
+  .rosa::before {
+    top: -40px;
+    left: -40px;
+    transform: rotate(45deg);
+  }
+
+  .rosa::after {
+    bottom: -40px;
+    right: -40px;
+    transform: rotate(-45deg);
+  }
+
+  h1 {
+    font-size: 36px;
+    color: #cc0066;
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+  }
+
+  .boton {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #6C3597; 
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
+
+  .boton:hover {
+    background-color: #8E44AD; 
+  }
+
+  .contenedor {
+    text-align: center;
+  }
+
+  .imagen {
+    width: 200px;
+    height: 200px;
+    transition: opacity 1s;
+    background-color: white;
+    border: 2px solid #6C3597; 
+    border-radius: 20px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+  }   
+
+  .rojo {
+    color: red;
+  }
+
+  .individual-bubble {
+    position: absolute;
+    border-radius: 100%;
+    bottom: 10px;
+    background-color: white;
+    z-index: 1;
+  }
+  /* Estilos para los pétalos de flores */
+.petalo {
+    position: fixed;
+    top: -50px;
+    font-size: 24px;
+    user-select: none;
+    z-index: 1000;
+    pointer-events: none;
+    animation: caida linear forwards;
+}
+
+@keyframes caida {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+/* Contenedor de la carta */
+.carta-diseno {
+    background-color: #fdf5e6 !important; /* Color crema papel */
+    background-image: radial-gradient(#f3e5ab 1px, transparent 1px) !important;
+    background-size: 20px 20px !important;
+    border: 2px solid #d4a373 !important;
+    border-radius: 15px !important;
+    padding: 20px !important;
+    box-shadow: 10px 10px 0px #ff4d6d !important;
+}
+
+/* Título de la carta */
+.titulo-carta {
+    font-family: 'Dancing Script', cursive; /* Necesitas importar esta fuente o usar una cursiva */
+    color: #b03a2e !important;
+    font-size: 2.2em !important;
+    margin-bottom: 15px;
+}
+
+/* Cuerpo del texto */
+.texto-carta {
+    text-align: left !important;
+    font-family: 'Georgia', serif;
+    line-height: 1.8;
+    color: #5d4037;
+    font-size: 1.1em;
+    padding: 10px;
+    border-left: 3px solid #ff4d6d;
+    background: rgba(255, 255, 255, 0.5);
+}
+
+.firma {
+    text-align: right;
+    font-weight: bold;
+    margin-top: 20px;
+    font-style: italic;
+    color: #b03a2e;
+}
